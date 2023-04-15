@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fake Bot</string>
+    <string name="no_messages_yet">No messages yet</string>
+    <string name="write_your_message_here">Write your message here</string>
+    <string name="button_send_message">Button send message</string>
+    <string name="empty_message">The message must not be empty</string>
+</resources>
