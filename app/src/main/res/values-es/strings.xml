@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_messages_yet">Aún no hay mensajes</string>
+    <string name="write_your_message_here">Escribe tu mensaje aqué</string>
+    <string name="button_send_message">Botón enviar mensaje</string>
+    <string name="empty_message">El mensaje no puede estar vacio</string>
+</resources>
