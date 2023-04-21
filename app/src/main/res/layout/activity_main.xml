@@ -14,38 +14,31 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <ScrollView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/enter_message"
-            android:layout_alignParentTop="true">
+            android:layout_height="match_parent"
+            android:layout_above="@+id/enter_message">
 
-            <FrameLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/messages_recycler"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/messages_recycler"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
+            <TextView
+                android:id="@+id/chat_empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/grey"
+                android:text="@string/no_messages_yet"
+                android:gravity="center"
+                />
 
-                <TextView
-                    android:id="@+id/chat_empty_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:visibility="visible"
-                    android:layout_gravity="center"
-                    android:textSize="24sp"
-                    android:textColor="@color/grey"
-                    android:text="@string/no_messages_yet"
-                    android:gravity="center"
-                    />
-
-            </FrameLayout>
-
-        </ScrollView>
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/enter_message"

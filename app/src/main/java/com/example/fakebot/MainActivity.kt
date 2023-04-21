@@ -55,14 +55,14 @@ class MainActivity : AppCompatActivity() {
                 viewModel.addMessage(Message("User", text, System.currentTimeMillis()))
                 binding.chatEmptyView.visibility = View.GONE
                 adapter.notifyItemInserted(viewModel.returnList()!!.size - 1)
-                binding.messagesRecycler.scrollToPosition(viewModel.returnList()!!.size - 2)
+                binding.messagesRecycler.scrollToPosition(viewModel.returnList()!!.size - 1)
                 binding.messageEdit.text.clear()
                 binding.sendButton.postDelayed(
                     {
                         val randomResponse = viewModel.returnMessage()
                         viewModel.addMessage(randomResponse)
                         adapter.notifyItemInserted(viewModel.returnList()!!.size - 1)
-                        binding.messagesRecycler.scrollToPosition(viewModel.returnList()!!.size - 2)
+                        binding.messagesRecycler.scrollToPosition(viewModel.returnList()!!.size - 1)
                     },
                     1000)
             }
